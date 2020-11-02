@@ -12,13 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 363c4c41ca4852342b535ba31e73425e, type: 3}
   m_Name: Spaceship Data
   m_EditorClassIdentifier: 
-  thrustAmount: 0
-  thrustInput: 0
-  yawSpeed: 0
-  pitchSpeed: 0
+  thrustAmount: 0.59
+  thrustInput: 1
+  yawSpeed: 1
+  pitchSpeed: 1
   steeringInput: {x: 0, y: 0, z: 0}
   leanAmount_X: 0
   leanAmount_Y: 0
   shootRate: 0
-  shootInput: 0
-  cameraTurnAmount: 0

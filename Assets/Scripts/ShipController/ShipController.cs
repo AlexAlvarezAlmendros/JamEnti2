@@ -23,9 +23,6 @@ public class ShipController : MonoBehaviour
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.E)) {
-            ShootProjectile();
-        }
         directionVector = new Vector3(Input.GetAxis("Vertical"), 0, Input.GetAxis("Horizontal"));
         data.steeringInput = directionVector;
     }
@@ -55,7 +52,7 @@ public class ShipController : MonoBehaviour
 
     void CalculateShootingLogic()
     {
-        if (data.shootInput == true)
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if (Time.time > nextShot)
             {
@@ -63,6 +60,9 @@ public class ShipController : MonoBehaviour
                 nextShot = Time.time + data.shootRate;
             }
         }
+        
+           
+        
     }
     void ShootProjectile()
     {

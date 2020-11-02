@@ -16,12 +16,4 @@ public class SpaceShipSO : ScriptableObject
 
     public float shootRate;
 
-    public bool shootInput;
-
-    public void UpdateInputData(Vector3 newSteering, float newThrust, bool newShoot)
-    {
-        steeringInput = newSteering;
-        thrustInput = newThrust;
-        shootInput = newShoot;
-    }
 }
