@@ -31,8 +31,39 @@ Transform:
   - {fileID: 3889747615048476825}
   - {fileID: 3889747615339486600}
   - {fileID: 3889747614423393180}
+  - {fileID: 3100421685210686780}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2483399590866326561
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3100421685210686780}
+  m_Layer: 0
+  m_Name: ChangeNave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3100421685210686780
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2483399590866326561}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 45.84254, y: -27.16413, z: 28.987167}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8179998250923188858}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3889747613678699383
 GameObject:
@@ -1104,10 +1135,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62b2c64487c2c5c4da87e1ff09a42bec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet1: {fileID: 570583797046738130, guid: 168fc9304a7b42f48a2bddd57e237378, type: 3}
-  bullet2: {fileID: 3084355089412954012, guid: 6fbdd9c580d9da346aee35cfe00ca3d8, type: 3}
+  bullet1: {fileID: 3084355089412954012, guid: 6fbdd9c580d9da346aee35cfe00ca3d8, type: 3}
+  bullet2: {fileID: 570583797046738130, guid: 168fc9304a7b42f48a2bddd57e237378, type: 3}
+  otherNave: {fileID: 3889747615339486604}
   velXY: 10
   velZ: 3
+  dirNave: -1
   typeNave: -1
 --- !u!1 &3889747614493556500
 GameObject:
@@ -1975,8 +2008,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62b2c64487c2c5c4da87e1ff09a42bec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet1: {fileID: 570583797046738130, guid: 168fc9304a7b42f48a2bddd57e237378, type: 3}
-  bullet2: {fileID: 3084355089412954012, guid: 6fbdd9c580d9da346aee35cfe00ca3d8, type: 3}
+  bullet1: {fileID: 3084355089412954012, guid: 6fbdd9c580d9da346aee35cfe00ca3d8, type: 3}
+  bullet2: {fileID: 570583797046738130, guid: 168fc9304a7b42f48a2bddd57e237378, type: 3}
+  otherNave: {fileID: 3889747614423393169}
   velXY: 10
   velZ: 3
+  dirNave: 1
   typeNave: 1

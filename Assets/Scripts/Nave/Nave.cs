@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
@@ -7,10 +8,12 @@ public class Nave : MonoBehaviour
 {
     public GameObject bullet1;
     public GameObject bullet2;
+    public GameObject otherNave;
 
     public float velXY = 10;
     public float velZ = 3;
 
+    public int dirNave;
     public int typeNave;
     float fireTimer;
     bool typeFire;
@@ -28,7 +31,7 @@ public class Nave : MonoBehaviour
 
         if (Input.GetButton("Jump"))
         {
-            velZ = 35;
+            velZ = 40;
         }
 
         else
@@ -38,7 +41,7 @@ public class Nave : MonoBehaviour
 
         if (Input.GetButton("Fire1"))
         {
-            if (fireTimer > 0.25f && typeNave == 1)
+            if (fireTimer > 0.25f && dirNave == 1)
             {
                if (typeFire)
                 {
@@ -58,7 +61,7 @@ public class Nave : MonoBehaviour
 
         else if (Input.GetButton("Fire2"))
         {
-            if (fireTimer > 0.25f && typeNave == -1)
+            if (fireTimer > 0.25f && dirNave == -1)
             {
                if (typeFire)
                 {
@@ -75,8 +78,8 @@ public class Nave : MonoBehaviour
             }
         }
 
+
         transform.position = transform.position + (transform.forward * velZ * Time.deltaTime);
         transform.eulerAngles = new Vector3(transform.eulerAngles.x + (Input.GetAxis("Vertical") * Time.deltaTime *100), transform.eulerAngles.y + (Input.GetAxis("Horizontal") * Time.deltaTime *100), transform.eulerAngles.z);
     }
-
 }

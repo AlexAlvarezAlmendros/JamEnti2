@@ -2,29 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Meteoritos : MonoBehaviour
+public class MiniMeteorito : MonoBehaviour
 {
     public int vida;
-    int initVida;
     bool isDestruido;
 
-    public GameObject miniMeteorito;
     // Start is called before the first frame update
     void Start()
     {
-        string vidas = ((int)transform.lossyScale.x).ToString();
-        vida = vidas.Length * (int)Random.Range(1,3);
-
-        if (vida <= 0)
-        {
-            vida = 3;
-        }
-
-        initVida = vida;
+        GetComponent<Rigidbody>().velocity = new Vector3(Random.Range(1,5),Random.Range(1,5),Random.Range(1,5)) * 5 * Mathf.Sign(Random.Range(-1, 1));
+        vida = 3;
         isDestruido = false;
     }
 
     // Update is called once per frame
+    
     void Update()
     {
         
@@ -36,8 +28,6 @@ public class Meteoritos : MonoBehaviour
                 GetComponent<MeshRenderer>().enabled = false;
                 GetComponent<SphereCollider>().enabled = false;
                 GetComponent<ParticleSystem>().Play();
-                Instantiate(miniMeteorito, transform.position, transform.rotation);
-                Instantiate(miniMeteorito, transform.position, transform.rotation);
                 Invoke("DestroyMeteorito", 3f);
             }
 
@@ -48,8 +38,6 @@ public class Meteoritos : MonoBehaviour
     }
     void DestroyMeteorito()
     {
-
         Destroy(gameObject);
     }
-
 }

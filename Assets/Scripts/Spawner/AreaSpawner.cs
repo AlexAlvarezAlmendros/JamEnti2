@@ -78,7 +78,7 @@ public class AreaSpawner : MonoBehaviour
         if (rdry)
         {
             if (scaleMass)
-                rdry.mass *= scale * scale * scale;
+                rdry.mass *= 10 * scale * 0.5f;
 
             rdry.AddRelativeForce(Random.insideUnitSphere * velocity, ForceMode.VelocityChange);
             rdry.AddRelativeTorque(Random.insideUnitSphere * angularVelocity * Mathf.Deg2Rad, ForceMode.VelocityChange);

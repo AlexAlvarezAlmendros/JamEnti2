@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6769492268843487202
+--- !u!1 &3140626911728382796
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,51 +8,51 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6249239223222343000}
-  - component: {fileID: 6995808087807630077}
-  - component: {fileID: 5112409292141817399}
-  - component: {fileID: 6148116332029287367}
-  - component: {fileID: 2590304890513746126}
-  - component: {fileID: -3181414295708669814}
-  - component: {fileID: -147836164081073279}
-  - component: {fileID: -8843516813636201183}
-  - component: {fileID: 5333327173315013578}
+  - component: {fileID: 2368452662223596022}
+  - component: {fileID: 1689330005548820051}
+  - component: {fileID: 3500779023740801689}
+  - component: {fileID: 2537164766566377321}
+  - component: {fileID: 6166890522002986080}
+  - component: {fileID: 2719882111575004196}
+  - component: {fileID: 8296240207338170767}
+  - component: {fileID: 4351715418643126116}
+  - component: {fileID: 4970125140064277662}
   m_Layer: 0
-  m_Name: meteo1
-  m_TagString: Meteorito
+  m_Name: miniMeteorito
+  m_TagString: MiniMeteoritos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6249239223222343000
+--- !u!4 &2368452662223596022
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6769492268843487202}
+  m_GameObject: {fileID: 3140626911728382796}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -22.619406, y: 2.5465677, z: -9.607976}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 300, y: 300, z: 250}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6995808087807630077
+--- !u!33 &1689330005548820051
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6769492268843487202}
+  m_GameObject: {fileID: 3140626911728382796}
   m_Mesh: {fileID: 1523636222640678383, guid: 7107149da5764d045bef6eb89ea44c75, type: 3}
---- !u!23 &5112409292141817399
+--- !u!23 &3500779023740801689
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6769492268843487202}
+  m_GameObject: {fileID: 3140626911728382796}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -85,42 +85,42 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &6148116332029287367
+--- !u!135 &2537164766566377321
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6769492268843487202}
+  m_GameObject: {fileID: 3140626911728382796}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.009380134
   m_Center: {x: -0.00012703706, y: 0.00008615246, z: -0.0007711495}
---- !u!54 &2590304890513746126
+--- !u!54 &6166890522002986080
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6769492268843487202}
+  m_GameObject: {fileID: 3140626911728382796}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
+  m_Mass: 10000
+  m_Drag: 0.1
   m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!208 &-3181414295708669814
+--- !u!208 &2719882111575004196
 NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6769492268843487202}
+  m_GameObject: {fileID: 3140626911728382796}
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 0
@@ -130,29 +130,14 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: -0.001}
   m_TimeToStationary: 0.5
---- !u!114 &-147836164081073279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6769492268843487202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef3fb773160b1b64c95e203a35857fb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vida: 0
-  miniMeteorito: {fileID: 3140626911728382796, guid: 694456a45e2a14b48b2f5bacd67f1b56,
-    type: 3}
---- !u!199 &-8843516813636201183
+--- !u!199 &8296240207338170767
 ParticleSystemRenderer:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6769492268843487202}
+  m_GameObject: {fileID: 3140626911728382796}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -209,13 +194,13 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!198 &5333327173315013578
+--- !u!198 &4351715418643126116
 ParticleSystem:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6769492268843487202}
+  m_GameObject: {fileID: 3140626911728382796}
   serializedVersion: 6
   lengthInSec: 2
   simulationSpeed: 1
@@ -4934,3 +4919,16 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &4970125140064277662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3140626911728382796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92633e1880e6c854da16742bed864afe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 0
