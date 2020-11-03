@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b5ea0e478195ba4ea2014a5dccad2ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 7619294571117473086, guid: 843c6168e9b45744981f0639b67d6aa1, type: 3}
+  prefab: {fileID: 6249239223222343000, guid: 48151a847df0af04bb788007a009f66a, type: 3}
   spawnShape: 1
   shapeModifiers: {x: 1, y: 1, z: 1}
   asteroidCount: 250
@@ -53,3 +53,4 @@ MonoBehaviour:
   velocity: 12.8
   angularVelocity: 11.04
   scaleMass: 1
+  surface: {fileID: 0}

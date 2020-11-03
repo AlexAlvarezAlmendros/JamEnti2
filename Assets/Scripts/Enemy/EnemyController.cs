@@ -5,8 +5,10 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     public NavMeshAgent agent;
+    public meshTester navmeshupdown;
 
     public Transform player;
+    public Transform player1;
 
     public LayerMask whatIsPlayer;
 
@@ -17,33 +19,37 @@ public class EnemyController : MonoBehaviour
     public float flyPointRange;
 
 
-    public float sightRange, attackRange;
-    public bool playerInSightRange, playerInAttackRange;
+    public float sightRange;
+    public bool player1InSightRange, playerInSightRange;
 
-    private void Awake()
-    {
-        player = GameObject.Find("PlayerObj").transform;
-        agent = GetComponent<NavMeshAgent>();
-    }
 
     private void Update()
     {
         //Check for sight and attack range
+        player1InSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
-        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
-        if (!playerInSightRange && !playerInAttackRange) Patroling();
-        if (playerInSightRange && !playerInAttackRange) ChasePlayer();
+        if (!playerInSightRange && !player1InSightRange) Patroling();
+        if (playerInSightRange)
+        {
+            ChasePlayer(true);
+        }
+        else { 
+            if (player1InSightRange) ChasePlayer(false);
+        }
     }
 
     private void Patroling()
     {
+       
         if (!flyPointSet) SearchFlyPoint();
 
-        if (flyPointSet)
+        if (flyPointSet) {
             agent.SetDestination(flyPoint);
+            transform.LookAt(flyPoint);
+        }
 
-        Vector3 distanceToFlyPoint = transform.position - flyPoint;
+        Vector3 distanceToFlyPoint = new Vector3 (transform.position.x - flyPoint.x, 0, transform.position.z - flyPoint.z);
 
         if (distanceToFlyPoint.magnitude < 1f)
             flyPointSet = false;
@@ -58,9 +64,18 @@ public class EnemyController : MonoBehaviour
             flyPointSet = true;
     }
 
-    private void ChasePlayer()
+    private void ChasePlayer(bool _whatplayer)
     {
-        agent.SetDestination(player.position);
+        if (_whatplayer)
+        {
+            agent.SetDestination(player.position);
+            transform.LookAt(player.position);
+        }
+        else {
+            agent.SetDestination(player1.position);
+            transform.LookAt(player1.position);
+
+        }
     }
     public void TakeDamage(int damage)
     {
@@ -75,8 +90,6 @@ public class EnemyController : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRange);
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, sightRange);
     }
