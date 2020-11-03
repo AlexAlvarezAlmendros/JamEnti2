@@ -5,7 +5,8 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class Nave : MonoBehaviour
 {
-    public GameObject bullet;
+    public GameObject bullet1;
+    public GameObject bullet2;
 
     public float velXY = 10;
     public float velZ = 3;
@@ -27,12 +28,12 @@ public class Nave : MonoBehaviour
 
         if (Input.GetButton("Jump"))
         {
-            velZ = 20;
+            velZ = 35;
         }
 
         else
         {
-            velZ = 10;
+            velZ = 20;
         }
 
         if (Input.GetButton("Fire1"))
@@ -41,13 +42,13 @@ public class Nave : MonoBehaviour
             {
                if (typeFire)
                 {
-                    Instantiate(bullet, transform.position + (transform.right * 1.8f) + (transform.forward * 1.2f), transform.rotation * Quaternion.Euler(Vector3.up * -1.5f));
+                    Instantiate(bullet2, transform.position + (transform.right * 1.8f) + (transform.forward * 1.2f), transform.rotation * Quaternion.Euler(Vector3.up * -1.5f));
                     typeFire = false;
                 }
 
                 else
                 {
-                    Instantiate(bullet, transform.position + (transform.right * -1.8f) + (transform.forward * 1.2f), transform.rotation * Quaternion.Euler(Vector3.up * 1.5f));
+                    Instantiate(bullet2, transform.position + (transform.right * -1.8f) + (transform.forward * 1.2f), transform.rotation * Quaternion.Euler(Vector3.up * 1.5f));
                     typeFire = true;
                 }
                 fireTimer = 0;
@@ -61,13 +62,13 @@ public class Nave : MonoBehaviour
             {
                if (typeFire)
                 {
-                    Instantiate(bullet, transform.position + (transform.right * 1.8f) + (transform.forward * 1.2f), transform.rotation * Quaternion.Euler(Vector3.up * -1.5f));
+                    Instantiate(bullet1, transform.position + (transform.right * 1.8f) + (transform.forward * 1.2f), transform.rotation * Quaternion.Euler(Vector3.up * -1.5f));
                     typeFire = false;
                 }
 
                 else
                 {
-                    Instantiate(bullet, transform.position + (transform.right * -1.8f) + (transform.forward * 1.2f), transform.rotation * Quaternion.Euler(Vector3.up * 1.5f));
+                    Instantiate(bullet1, transform.position + (transform.right * -1.8f) + (transform.forward * 1.2f), transform.rotation * Quaternion.Euler(Vector3.up * 1.5f));
                     typeFire = true;
                 }
                 fireTimer = 0;

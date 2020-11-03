@@ -58,7 +58,6 @@ public class AreaSpawner : MonoBehaviour
         }
         else if (spawnShape == RandomSpawnerShape.Sphere)
         {
-            Debug.Log("cagondios");
             spawnPos = Random.insideUnitSphere * range;
             spawnPos.x *= shapeModifiers.x;
             spawnPos.y *= shapeModifiers.y;
