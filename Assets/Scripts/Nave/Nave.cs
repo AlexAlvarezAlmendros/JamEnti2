@@ -26,8 +26,14 @@ public class Nave : MonoBehaviour
         {
             velZ = 5;
         }
-        //transform.position = new Vector3(transform.position.x + (Input.GetAxis("Horizontal") * velXY *Time.deltaTime * direction), transform.position.y + (Input.GetAxis("Vertical") * velXY *Time.deltaTime), transform.position.z +( velZ * Time.deltaTime * direction));
+
+        if (Input.GetButton("Fire1"))
+        {
+            Debug.Log("aaa");
+        }
+
         transform.position = transform.position + (transform.forward * velZ * Time.deltaTime);
         transform.eulerAngles = new Vector3(transform.eulerAngles.x + (Input.GetAxis("Vertical") * Time.deltaTime *100), transform.eulerAngles.y + (Input.GetAxis("Horizontal") * Time.deltaTime *100), transform.eulerAngles.z);
     }
+
 }

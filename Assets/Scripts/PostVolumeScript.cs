@@ -19,14 +19,12 @@ public class PostVolumeScript : MonoBehaviour
         GetComponent<PostProcessVolume>().profile.TryGetSettings<ChromaticAberration>(out effect);
         if (Input.GetButton("Jump"))
         {
-            effect.intensity.value = Mathf.Lerp(effect.intensity.value, 3, 10 * Time.deltaTime);
+            effect.intensity.value = Mathf.Lerp(effect.intensity.value, 1.5f, 10 * Time.deltaTime);
         }
 
         else
         {
             effect.intensity.value = Mathf.Lerp(effect.intensity.value, 0, 5 * Time.deltaTime);
         }
-        
-        Debug.Log(effect.intensity.value );
     }
 }
