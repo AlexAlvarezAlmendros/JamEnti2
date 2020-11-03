@@ -4,98 +4,57 @@ using UnityEngine;
 
 public class ShipController : MonoBehaviour
 {
-    public float thrustForce = 20f;
-    public float shootRate;
+    public SpaceShipSO data;
+
     public Rigidbody spaceshipRigidbody;
 
     public GameObject projectile;
     public Transform projectileSpawnTransform;
     private float nextShot = 0.0f;
+    public Transform shipModel;
+    Vector3 directionVector;
 
-    float horizontalInput;
-    float verticalInput;
-
-    public Transform lookRight;
-    public Transform lookLeft;
-    public Transform lookUp;
-    public Transform lookDown;
-    public float RotateSpeed = 30f;
-
-    bool down, up, right, left;
-
-
-    void Update() {
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        verticalInput = Input.GetAxisRaw("Vertical");
-
-        down = Input.GetButton("down");
-        up = Input.GetButton("up");
-        right = Input.GetButton("right");
-        left = Input.GetButton("left");
-        TurnSpaceShip();
-    }
-
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         MoveSpaceship();
-        spaceshipRigidbody.velocity = new Vector2(horizontalInput * thrustForce, verticalInput * thrustForce);
+        TurnSpaceship();
+        
+    }
+
+    void Update()
+    {
+        directionVector = new Vector3(Input.GetAxis("Vertical"), 0, Input.GetAxis("Horizontal"));
+        data.steeringInput = directionVector;
+        if (Input.GetButton("Jump"))
+        {
+            data.thrustInput = 2f;
+        }
+        else {
+            data.thrustInput = 1f;
+
+        }
     }
 
     void MoveSpaceship()
     {
-        spaceshipRigidbody.velocity = transform.forward * thrustForce * (Mathf.Max(thrustForce, .2f));
-    }
-
-    void TurnSpaceShip() {
-
-        if (left)
-        {
-            transform.rotation = Quaternion.Lerp(transform.rotation, lookLeft.rotation, Time.time * RotateSpeed);
-        }
-
-        if (right)
-        {
-            transform.rotation = Quaternion.Lerp(transform.rotation, lookRight.rotation, Time.time * RotateSpeed);
-        }
-
-        if (up)
-        {
-            transform.rotation = Quaternion.Lerp(transform.rotation, lookUp.rotation, Time.time * RotateSpeed);
-        }
-
-        if (down)
-        {
-            transform.rotation = Quaternion.Lerp(transform.rotation, lookLeft.rotation, Time.time * RotateSpeed);
-        }
-
+        spaceshipRigidbody.velocity = transform.forward * data.thrustAmount * (Mathf.Max(data.thrustInput, .2f));
     }
 
 
-
-
-
-
-
-
-    void CalculateShootingLogic()
+    void TurnSpaceship()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (Time.time > nextShot)
-            {
-                ShootProjectile();
-                nextShot = Time.time + shootRate;
-            }
-        }
+        Vector3 newTorque = new Vector3(data.steeringInput.x * data.pitchSpeed, -data.steeringInput.z * data.yawSpeed, 0);
+        spaceshipRigidbody.AddRelativeTorque(newTorque);
+
+        spaceshipRigidbody.rotation =
+            Quaternion.Slerp(spaceshipRigidbody.rotation, Quaternion.Euler(new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, 0)), .5f);
+
+        VisualSpaceshipTurn();
     }
-    void ShootProjectile()
+
+    void VisualSpaceshipTurn()
     {
-
-        GameObject newProjectile = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
-        newProjectile.GetComponent<Rigidbody>().AddForce(transform.forward * 10);
-        newProjectile.transform.position = projectileSpawnTransform.position;
-        newProjectile.transform.rotation = projectileSpawnTransform.rotation;
-        newProjectile.SetActive(true);
-
+        shipModel.localEulerAngles = new Vector3(data.steeringInput.x * data.leanAmount_Y
+            , shipModel.localEulerAngles.y, data.steeringInput.z * data.leanAmount_X);
     }
 }

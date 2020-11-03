@@ -14,6 +14,5 @@ public class SpaceShipSO : ScriptableObject
     public float leanAmount_X;
     public float leanAmount_Y;
 
-    public float shootRate;
 
 }
