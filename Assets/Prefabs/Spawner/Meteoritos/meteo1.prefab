@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5112409292141817399}
   - component: {fileID: 6148116332029287367}
   - component: {fileID: 2590304890513746126}
+  - component: {fileID: -3181414295708669814}
   m_Layer: 0
   m_Name: meteo1
   m_TagString: Untagged
@@ -110,3 +111,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!208 &-3181414295708669814
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6769492268843487202}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.02, y: 0.00001, z: 0.02}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: -0.001}
+  m_TimeToStationary: 0.5

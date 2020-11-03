@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6296186591912893039}
   - component: {fileID: 3935926865144266751}
   - component: {fileID: 2065303025162909631}
+  - component: {fileID: 6630951513574019824}
   m_Layer: 0
   m_Name: meteo3
   m_TagString: Untagged
@@ -110,3 +111,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.008627504
   m_Center: {x: 0.0013978488, y: 0.00076382095, z: -0.0015551257}
+--- !u!208 &6630951513574019824
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5503522065843764154}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.02, y: 0.00001, z: 0.02}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: -0.001}
+  m_TimeToStationary: 0.5
