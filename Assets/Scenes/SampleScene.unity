@@ -737,6 +737,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 25591456558990008, guid: aff973160460d344385ec0122f839272,
+        type: 3}
+      propertyPath: MusicVolume
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 3283591726811426237, guid: aff973160460d344385ec0122f839272,
         type: 3}
       propertyPath: m_Name
@@ -901,7 +906,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &906062673
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1758,7 +1763,7 @@ MonoBehaviour:
 
     Artist - Guillem Garcia
 
-    Music - Jan Hoppman'
+    Music - Jan Hoppmann'
 --- !u!222 &1531245798
 CanvasRenderer:
   m_ObjectHideFlags: 0
