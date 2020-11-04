@@ -45,6 +45,11 @@ public class EscudoMeteorito : MonoBehaviour
                 GetComponent<SphereCollider>().enabled = false;
                 GetComponent<ParticleSystem>().Play();
                 Invoke("DestroyMeteorito", 3f);
+                AllInOneManager.instance.IncreaseScore();
+                AllInOneManager.instance.IncreaseScore();
+                AllInOneManager.instance.IncreaseScore();
+                AllInOneManager.instance.IncreaseScore();
+                AllInOneManager.instance.IncreaseScore();
             }
 
         }

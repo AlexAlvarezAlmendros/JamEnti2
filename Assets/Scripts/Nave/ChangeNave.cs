@@ -35,7 +35,7 @@ public class ChangeNave : MonoBehaviour
     public AudioClip laserReflection;
     public AudioClip escudoDead;
     public AudioClip escudoDamage;
-
+    public AudioClip wormDamage;
     // Start is called before the first frame update
     void Start()
     {
@@ -126,4 +126,14 @@ public class ChangeNave : MonoBehaviour
         GetComponent<AudioSource>().PlayOneShot(escudoDead, Random.Range(1.5f,2));
     }
 
+    public void PlayWormDamage()
+    {
+        GetComponent<AudioSource>().PlayOneShot(wormDamage, Random.Range(0.5f,1));
+    }
+
+    public void PlayWormDead()
+    {
+        GetComponent<AudioSource>().PlayOneShot(wormDamage, Random.Range(2,3));
+        Invoke("PlayMeteoritoDead", 1f);
+    }
 }

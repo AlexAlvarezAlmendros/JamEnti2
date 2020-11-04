@@ -33,9 +33,9 @@ public class AllInOneManager : MonoBehaviour
 
     public void DecreaseLives() {
         lives--;
-        
+        GameObject.FindGameObjectWithTag("Sound").GetComponent<ChangeNave>().PlayMeteoritoDamage();
         if (lives <= 0) {
-            SceneManager.LoadScene("SampleScene"); //gameover
+            SceneManager.LoadScene("SampleScene");
         }
     }
 }
