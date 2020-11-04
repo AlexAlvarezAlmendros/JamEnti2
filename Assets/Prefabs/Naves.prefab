@@ -44,6 +44,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3100421685210686780}
+  - component: {fileID: 8377471131857160792}
   m_Layer: 0
   m_Name: ChangeNave
   m_TagString: Untagged
@@ -58,13 +59,101 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2483399590866326561}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 45.84254, y: -27.16413, z: 28.987167}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8179998250923188858}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8377471131857160792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2483399590866326561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04c7889e7b0d20a4e8652c1d0ba15034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  naveGFX1: {fileID: 3889747613958928346}
+  naveGFX2: {fileID: 3889747614493556500}
+  matGFX1: {fileID: 2100000, guid: 9e1c631140ccbe84f98a865dfe80435e, type: 2}
+  matGFX2: {fileID: 2100000, guid: 976f46e7592ca5e4c8247baf13878859, type: 2}
+  bullet1: {fileID: 3084355089412954012, guid: 6fbdd9c580d9da346aee35cfe00ca3d8, type: 3}
+  bullet2: {fileID: 570583797046738130, guid: 168fc9304a7b42f48a2bddd57e237378, type: 3}
+  nave1: {fileID: 3889747615339486604}
+  nave2: {fileID: 3889747614423393169}
+  nave1Gradient:
+    serializedVersion: 2
+    key0: {r: 0, g: 0.523991, b: 0.6509804, a: 0.5882353}
+    key1: {r: 0.7402266, g: 1, b: 0, a: 0}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 16384
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 16384
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  nave2Gradient:
+    serializedVersion: 2
+    key0: {r: 0.9433962, g: 0.16464934, b: 0.24656333, a: 0.5882353}
+    key1: {r: 0.7402266, g: 1, b: 0, a: 0}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 16384
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 16384
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  trail1Nave1: {fileID: 3889747614134365205}
+  trail2Nave1: {fileID: 3889747614616425077}
+  trail3Nave1: {fileID: 3889747613772150493}
+  trail4Nave1: {fileID: 3889747614318433732}
+  trail5Nave1: {fileID: 3889747614764725399}
+  trail1Nave2: {fileID: 3889747615331053323}
+  trail2Nave2: {fileID: 3889747614367232731}
+  trail3Nave2: {fileID: 3889747615063056623}
+  trail4Nave2: {fileID: 3889747614246366970}
+  trail5Nave2: {fileID: 3889747613678699383}
 --- !u!1 &3889747613678699383
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,6 +1171,7 @@ GameObject:
   - component: {fileID: 3889747614423393180}
   - component: {fileID: 3889747614423393183}
   - component: {fileID: 3889747614423393168}
+  - component: {fileID: 2062934659329129488}
   m_Layer: 0
   m_Name: Nave2
   m_TagString: Untagged
@@ -1135,13 +1225,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62b2c64487c2c5c4da87e1ff09a42bec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet1: {fileID: 3084355089412954012, guid: 6fbdd9c580d9da346aee35cfe00ca3d8, type: 3}
-  bullet2: {fileID: 570583797046738130, guid: 168fc9304a7b42f48a2bddd57e237378, type: 3}
-  otherNave: {fileID: 3889747615339486604}
+  bullet: {fileID: 570583797046738130, guid: 168fc9304a7b42f48a2bddd57e237378, type: 3}
   velXY: 10
   velZ: 3
   dirNave: -1
   typeNave: -1
+--- !u!54 &2062934659329129488
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3889747614423393169}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3889747614493556500
 GameObject:
   m_ObjectHideFlags: 0
@@ -1200,7 +1304,6 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
   - {fileID: 2100000, guid: 976f46e7592ca5e4c8247baf13878859, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -1955,6 +2058,7 @@ GameObject:
   - component: {fileID: 3889747615339486600}
   - component: {fileID: 3889747615339486603}
   - component: {fileID: 3889747615339486615}
+  - component: {fileID: 3854975310907527294}
   m_Layer: 0
   m_Name: Nave1
   m_TagString: Untagged
@@ -2008,10 +2112,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62b2c64487c2c5c4da87e1ff09a42bec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet1: {fileID: 3084355089412954012, guid: 6fbdd9c580d9da346aee35cfe00ca3d8, type: 3}
-  bullet2: {fileID: 570583797046738130, guid: 168fc9304a7b42f48a2bddd57e237378, type: 3}
-  otherNave: {fileID: 3889747614423393169}
+  bullet: {fileID: 3084355089412954012, guid: 6fbdd9c580d9da346aee35cfe00ca3d8, type: 3}
   velXY: 10
   velZ: 3
   dirNave: 1
   typeNave: 1
+--- !u!54 &3854975310907527294
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3889747615339486604}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
