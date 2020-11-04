@@ -42,12 +42,14 @@ public class Bullet : MonoBehaviour
             Invoke("DestroyBullet", 0.3f);
             GetComponent<BoxCollider>().enabled = false;
             GetComponent<MeshRenderer>().enabled = false;
+            GameObject.FindGameObjectWithTag("Sound").GetComponent<ChangeNave>().PlayMeteoritoDamage();
         }
 
         if (collision.gameObject.tag == "Satelit")
         {
             GetComponent<Rigidbody>().velocity = Vector3.zero;
             direction = direction * -1;
+            GameObject.FindGameObjectWithTag("Sound").GetComponent<ChangeNave>().PlayLaserReflection();
         }
 
         if (collision.gameObject.tag == "MiniMeteoritos")
@@ -56,6 +58,7 @@ public class Bullet : MonoBehaviour
             Invoke("DestroyBullet", 0.3f);
             GetComponent<BoxCollider>().enabled = false;
             GetComponent<MeshRenderer>().enabled = false;
+            GameObject.FindGameObjectWithTag("Sound").GetComponent<ChangeNave>().PlayMeteoritoDamage();
         }
 
         if (collision.gameObject.tag == "Escudo")
@@ -66,6 +69,7 @@ public class Bullet : MonoBehaviour
                 Invoke("DestroyBullet", 0.3f);
                 GetComponent<BoxCollider>().enabled = false;
                 GetComponent<MeshRenderer>().enabled = false;
+                GameObject.FindGameObjectWithTag("Sound").GetComponent<ChangeNave>().PlayEscudoDamage();
             }
 
             if (bulletType == 2 && collision.gameObject.GetComponent<Escudo>().escudoType == 2)
@@ -74,11 +78,13 @@ public class Bullet : MonoBehaviour
                 Invoke("DestroyBullet", 0.3f);
                 GetComponent<BoxCollider>().enabled = false;
                 GetComponent<MeshRenderer>().enabled = false;
+                GameObject.FindGameObjectWithTag("Sound").GetComponent<ChangeNave>().PlayEscudoDamage();
             }
 
             if (bulletType != collision.gameObject.GetComponent<Escudo>().escudoType)
             {
                 direction = direction * -1;
+                GameObject.FindGameObjectWithTag("Sound").GetComponent<ChangeNave>().PlayLaserReflection();
             }
         }
 
@@ -86,6 +92,7 @@ public class Bullet : MonoBehaviour
         {
             collision.gameObject.GetComponent<EscudoMeteorito>().vida -= 1;
             Invoke("DestroyBullet", 0.3f);
+            GameObject.FindGameObjectWithTag("Sound").GetComponent<ChangeNave>().PlayMeteoritoDamage();
             GetComponent<BoxCollider>().enabled = false;
             GetComponent<MeshRenderer>().enabled = false;
         }

@@ -42,12 +42,14 @@ public class Nave : MonoBehaviour
             {
                if (typeFire)
                 {
+                    GameObject.FindGameObjectWithTag("Sound").GetComponent<ChangeNave>().PlayDisparo();
                     Instantiate(bullet, transform.position + (transform.right * 1.8f) + (transform.forward * 1.2f), transform.rotation * Quaternion.Euler(Vector3.up * -1.5f));
                     typeFire = false;
                 }
 
                 else
                 {
+                    GameObject.FindGameObjectWithTag("Sound").GetComponent<ChangeNave>().PlayDisparo();
                     Instantiate(bullet, transform.position + (transform.right * -1.8f) + (transform.forward * 1.2f), transform.rotation * Quaternion.Euler(Vector3.up * 1.5f));
                     typeFire = true;
                 }
@@ -62,12 +64,14 @@ public class Nave : MonoBehaviour
             {
                if (typeFire)
                 {
+                    GameObject.FindGameObjectWithTag("Sound").GetComponent<ChangeNave>().PlayDisparo();
                     Instantiate(bullet, transform.position + (transform.right * 1.8f) + (transform.forward * 1.2f), transform.rotation * Quaternion.Euler(Vector3.up * -1.5f));
                     typeFire = false;
                 }
 
                 else
                 {
+                    GameObject.FindGameObjectWithTag("Sound").GetComponent<ChangeNave>().PlayDisparo();
                     Instantiate(bullet, transform.position + (transform.right * -1.8f) + (transform.forward * 1.2f), transform.rotation * Quaternion.Euler(Vector3.up * 1.5f));
                     typeFire = true;
                 }

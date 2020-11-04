@@ -9,6 +9,7 @@ TagManager:
   - MiniMeteoritos
   - Escudo
   - Dorado
+  - Sound
   layers:
   - Default
   - TransparentFX

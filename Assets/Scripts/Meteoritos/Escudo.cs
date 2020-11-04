@@ -38,6 +38,7 @@ public class Escudo : MonoBehaviour
             if (isDestruido == false)
             {
                 isDestruido = true;
+                GameObject.FindGameObjectWithTag("Sound").GetComponent<ChangeNave>().PlayEscudoDead();
                 GetComponent<MeshRenderer>().enabled = false;
                 GetComponent<SphereCollider>().enabled = false;
             }
