@@ -1738,13 +1738,13 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 7db6756770dd96a45ab21c3b93a1290f, type: 3}
-    m_FontSize: 10
+    m_FontSize: 18
     m_FontStyle: 0
-    m_BestFit: 1
+    m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 180
-    m_Alignment: 7
-    m_AlignByGeometry: 0
+    m_MaxSize: 193
+    m_Alignment: 4
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
@@ -1756,7 +1756,9 @@ MonoBehaviour:
     Artist - Javier
     Soto
 
-    Artist - Guillem Garcia'
+    Artist - Guillem Garcia
+
+    Music - Jan Hoppman'
 --- !u!222 &1531245798
 CanvasRenderer:
   m_ObjectHideFlags: 0
