@@ -84,11 +84,12 @@ public class EnemyController : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-
+        
         if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
     }
     private void DestroyEnemy()
     {
+        GameObject.FindGameObjectWithTag("Sound").GetComponent<ChangeNave>().PlayWormDead();
         Destroy(gameObject);
     }
 
@@ -102,6 +103,7 @@ public class EnemyController : MonoBehaviour
     {
         if (col.gameObject.tag == "Bullet")
         {
+            GameObject.FindGameObjectWithTag("Sound").GetComponent<ChangeNave>().PlayWormDamage();
             health -= 10f;
             AllInOneManager.instance.IncreaseScore();
         }

@@ -28,6 +28,7 @@ public class MiniMeteorito : MonoBehaviour
                 GetComponent<MeshRenderer>().enabled = false;
                 GetComponent<SphereCollider>().enabled = false;
                 GetComponent<ParticleSystem>().Play();
+                AllInOneManager.instance.IncreaseScore();
                 Invoke("DestroyMeteorito", 3f);
             }
 

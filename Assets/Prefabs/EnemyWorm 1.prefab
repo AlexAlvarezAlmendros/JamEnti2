@@ -1867,7 +1867,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 4585772305887742249}
   navmeshupdown: {fileID: 1956683631, guid: 309ea9c1dcb74eb40baef55d430c3976, type: 3}
-  Manager: {fileID: 6304266992219260643, guid: be6a0c701a6fe2949930af9d02442e6e, type: 3}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 3072

@@ -13,6 +13,7 @@ public class Nave : MonoBehaviour
     public int dirNave;
     public int typeNave;
     float fireTimer;
+    float deadTimer;
     bool typeFire;
 
     // Start is called before the first frame update
@@ -25,6 +26,7 @@ public class Nave : MonoBehaviour
     void Update()
     {
         fireTimer += Time.deltaTime;
+        deadTimer += Time.deltaTime;
 
         if (Input.GetButton("Jump"))
         {
@@ -82,5 +84,14 @@ public class Nave : MonoBehaviour
 
         transform.position = transform.position + (transform.forward * velZ * Time.deltaTime);
         transform.eulerAngles = new Vector3(transform.eulerAngles.x + (Input.GetAxis("Vertical") * Time.deltaTime *100), transform.eulerAngles.y + (Input.GetAxis("Horizontal") * Time.deltaTime *100), transform.eulerAngles.z);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if ((collision.gameObject.tag == "Meteorito" || collision.gameObject.tag == "Satelit" || collision.gameObject.tag == "MiniMeteoritos" || collision.gameObject.tag == "Escudo" || collision.gameObject.tag == "Dorado" || collision.gameObject.tag == "Bullet") && deadTimer >0.5)
+        {
+            deadTimer = 0;
+            AllInOneManager.instance.DecreaseLives();
+        }
     }
 }

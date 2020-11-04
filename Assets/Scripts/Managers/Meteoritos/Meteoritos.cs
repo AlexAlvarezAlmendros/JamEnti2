@@ -5,7 +5,6 @@ using UnityEngine;
 public class Meteoritos : MonoBehaviour
 {
     public int vida;
-    int initVida;
     bool isDestruido;
 
     public GameObject miniMeteorito;
@@ -19,8 +18,6 @@ public class Meteoritos : MonoBehaviour
         {
             vida = 3;
         }
-
-        initVida = vida;
         isDestruido = false;
     }
 
@@ -39,6 +36,8 @@ public class Meteoritos : MonoBehaviour
                 Instantiate(miniMeteorito, transform.position, transform.rotation);
                 Instantiate(miniMeteorito, transform.position, transform.rotation);
                 GameObject.FindGameObjectWithTag("Sound").GetComponent<ChangeNave>().PlayMeteoritoDead();
+                AllInOneManager.instance.IncreaseScore();
+                AllInOneManager.instance.IncreaseScore();
                 Invoke("DestroyMeteorito", 3f);
             }
 
