@@ -9,6 +9,9 @@ TagManager:
   - MiniMeteoritos
   - Escudo
   - Dorado
+  - nave1
+  - nave2
+  - Bullet
   layers:
   - Default
   - TransparentFX
