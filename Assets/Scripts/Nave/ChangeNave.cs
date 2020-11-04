@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.XR;
 
 public class ChangeNave : MonoBehaviour
@@ -28,6 +29,13 @@ public class ChangeNave : MonoBehaviour
     public GameObject trail4Nave2;
     public GameObject trail5Nave2;
     bool tpNaves;
+
+    public AudioClip meteoritoDead;
+    public AudioClip laserShot;
+    public AudioClip laserReflection;
+    public AudioClip escudoDead;
+    public AudioClip escudoDamage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -81,5 +89,41 @@ public class ChangeNave : MonoBehaviour
                 trail5Nave2.GetComponent<TrailRenderer>().colorGradient = nave1Gradient;
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
     }
+
+    public void PlayMeteoritoDamage()
+    {
+        GetComponent<AudioSource>().PlayOneShot(meteoritoDead, Random.Range(0.5f,1));
+    }
+
+    public void PlayMeteoritoDead()
+    {
+        GetComponent<AudioSource>().PlayOneShot(meteoritoDead, Random.Range(1.5f,2));
+    }
+
+    public void PlayDisparo()
+    {
+        GetComponent<AudioSource>().PlayOneShot(laserShot, Random.Range(0.5f,0.75f));
+    }
+
+    public void PlayLaserReflection()
+    {
+        GetComponent<AudioSource>().PlayOneShot(laserReflection, Random.Range(0.5f,0.75f));
+    }
+
+    public void PlayEscudoDamage()
+    {
+        GetComponent<AudioSource>().PlayOneShot(escudoDamage, Random.Range(0.5f,1));
+    }
+
+    public void PlayEscudoDead()
+    {
+        GetComponent<AudioSource>().PlayOneShot(escudoDead, Random.Range(1.5f,2));
+    }
+
 }

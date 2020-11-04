@@ -38,6 +38,7 @@ public class Meteoritos : MonoBehaviour
                 GetComponent<ParticleSystem>().Play();
                 Instantiate(miniMeteorito, transform.position, transform.rotation);
                 Instantiate(miniMeteorito, transform.position, transform.rotation);
+                GameObject.FindGameObjectWithTag("Sound").GetComponent<ChangeNave>().PlayMeteoritoDead();
                 Invoke("DestroyMeteorito", 3f);
             }
 
