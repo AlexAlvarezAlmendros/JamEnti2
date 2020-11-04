@@ -15,6 +15,9 @@ public class CanvasUpdater : MonoBehaviour
     public Image mlive2;
     public Image mlive3;
 
+    void Start() {
+        AllInOneManager.instance.score = 0;
+    }
 
     void Update() {
         scoretext.text =  AllInOneManager.instance.score.ToString("D5");
