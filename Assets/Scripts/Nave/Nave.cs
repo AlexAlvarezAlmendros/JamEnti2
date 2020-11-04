@@ -19,6 +19,7 @@ public class Nave : MonoBehaviour
     void Start()
     {
         fireTimer = 0;
+        deadTimer = 0;
     }
 
     // Update is called once per frame
@@ -87,7 +88,16 @@ public class Nave : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if ((collision.gameObject.tag == "Meteorito" || collision.gameObject.tag == "Satelit" || collision.gameObject.tag == "MiniMeteoritos" || collision.gameObject.tag == "Escudo" || collision.gameObject.tag == "Dorado" || collision.gameObject.tag == "Bullet") && deadTimer >0.5)
+        if ((collision.gameObject.tag == "Meteorito" || collision.gameObject.tag == "Satelit" || collision.gameObject.tag == "MiniMeteoritos" || collision.gameObject.tag == "Escudo" || collision.gameObject.tag == "Dorado" || collision.gameObject.tag == "Bullet") && deadTimer > 2)
+        {
+            deadTimer = 0;
+            AllInOneManager.instance.DecreaseLives();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (gameObject.tag == "nave1" && other.gameObject.tag == "nave2" && deadTimer > 2)
         {
             deadTimer = 0;
             AllInOneManager.instance.DecreaseLives();

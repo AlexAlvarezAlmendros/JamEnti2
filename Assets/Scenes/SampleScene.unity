@@ -424,7 +424,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'WASD - Movment
+  m_Text: 'WASD - Movement
 
     Space - Turbo
 
@@ -868,7 +868,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Left Joystick - Movment
+  m_Text: 'Left Joystick - Movement
 
     Y - Turbo
 
@@ -1692,7 +1692,7 @@ GameObject:
   - component: {fileID: 1531245798}
   - component: {fileID: 1531245797}
   m_Layer: 0
-  m_Name: Controls
+  m_Name: Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1756,7 +1756,7 @@ MonoBehaviour:
     Artist - Javier
     Soto
 
-    Artist - Guiem Garcia'
+    Artist - Guillem Garcia'
 --- !u!222 &1531245798
 CanvasRenderer:
   m_ObjectHideFlags: 0

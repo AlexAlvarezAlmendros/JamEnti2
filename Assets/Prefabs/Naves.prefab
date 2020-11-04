@@ -1275,6 +1275,7 @@ GameObject:
   - component: {fileID: 3889747614423393183}
   - component: {fileID: 3889747614423393168}
   - component: {fileID: 2062934659329129488}
+  - component: {fileID: 688808105658001779}
   m_Layer: 0
   m_Name: Nave2
   m_TagString: Untagged
@@ -1349,6 +1350,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &688808105658001779
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3889747614423393169}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 3.8329144}
+  m_Center: {x: 0, y: 0, z: -1.4164572}
 --- !u!1 &3889747614493556500
 GameObject:
   m_ObjectHideFlags: 0
@@ -2160,6 +2174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3889747615339486600}
   - component: {fileID: 3889747615339486603}
+  - component: {fileID: 8088186907645084549}
   - component: {fileID: 3889747615339486615}
   - component: {fileID: 3854975310907527294}
   m_Layer: 0
@@ -2203,6 +2218,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &8088186907645084549
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3889747615339486604}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 3.8329144}
+  m_Center: {x: 0, y: 0, z: -1.4164572}
 --- !u!114 &3889747615339486615
 MonoBehaviour:
   m_ObjectHideFlags: 0

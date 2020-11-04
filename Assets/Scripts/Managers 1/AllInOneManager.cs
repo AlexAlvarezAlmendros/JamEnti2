@@ -22,9 +22,10 @@ public class AllInOneManager : MonoBehaviour
             return;
         }
     }
-        void Start()
+    void Start()
     {
         score = 0;
+        lives = 3;
     }
 
     public void IncreaseScore() {

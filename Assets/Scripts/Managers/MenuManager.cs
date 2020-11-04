@@ -31,6 +31,8 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("MainScene");
         SoundManager.instance.Stop("menuLoop");
         SoundManager.instance.Play("GameLoop");
+        AllInOneManager.instance.lives = 3;
+        AllInOneManager.instance.score = 0;
     }
 
     public void PlayHowToPlay()
