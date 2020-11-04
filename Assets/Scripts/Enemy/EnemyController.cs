@@ -103,6 +103,11 @@ public class EnemyController : MonoBehaviour
         if (col.gameObject.tag == "Bullet")
         {
             health -= 10f;
+            AllInOneManager.instance.IncreaseScore();
+        }
+        if (col.gameObject.tag == "nave1" || col.gameObject.tag == "nave2")
+        {
+            AllInOneManager.instance.DecreaseLives(); ;
         }
     }
 

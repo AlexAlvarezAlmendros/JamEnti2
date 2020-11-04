@@ -23,7 +23,6 @@ public class DamageVisual : MonoBehaviour
         if (col.gameObject.tag == "Bullet")
         {
             OnDamage();
-            Debug.Log("Damage");
             Destroy(col.gameObject);
         }
     }
