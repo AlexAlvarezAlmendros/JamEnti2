@@ -615,6 +615,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7742103288041251662}
   - component: {fileID: 7742103288041251657}
+  - component: {fileID: 6562963036140155201}
   m_Layer: 0
   m_Name: Damp
   m_TagString: Untagged
@@ -657,6 +658,29 @@ MonoBehaviour:
     m_MaintainAim: 1
   m_SourceObjectsGUIToggle: 1
   m_SettingsGUIToggle: 1
+--- !u!114 &6562963036140155201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7742103288041251663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 214da8c01b98f91468b447b69fc6943f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
+  navmeshupdown: {fileID: 1956683631, guid: 309ea9c1dcb74eb40baef55d430c3976, type: 3}
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 3072
+  health: 100
+  flyPoint: {x: 0, y: 0, z: 0}
+  flyPointRange: 200
+  sightRange: 46.6
+  player1InSightRange: 0
+  playerInSightRange: 0
 --- !u!1 &7742103288076131952
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,7 +895,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7742103288578151290}
   m_LocalRotation: {x: 0.0077346475, y: 0.7566872, z: -0.008907461, w: -0.65367067}
-  m_LocalPosition: {x: 14.495871, y: 16.919043, z: 2.0004933}
+  m_LocalPosition: {x: 70.75, y: 16.919043, z: 2.0004933}
   m_LocalScale: {x: 3.9625, y: 3.9625, z: 3.9625}
   m_Children:
   - {fileID: 7742103288076131955}
@@ -935,12 +959,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 1972237650}
-  navmeshupdown: {fileID: 0}
-  player: {fileID: 0}
-  player1: {fileID: 0}
+  navmeshupdown: {fileID: 1956683631, guid: 309ea9c1dcb74eb40baef55d430c3976, type: 3}
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 3072
   health: 100
   flyPoint: {x: 0, y: 0, z: 0}
   flyPointRange: 200

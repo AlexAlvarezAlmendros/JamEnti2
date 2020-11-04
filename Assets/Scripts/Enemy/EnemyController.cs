@@ -7,8 +7,8 @@ public class EnemyController : MonoBehaviour
     public NavMeshAgent agent;
     public meshTester navmeshupdown;
 
-    public Transform player;
-    public Transform player1;
+     GameObject player;
+     GameObject player1;
 
     public LayerMask whatIsPlayer;
 
@@ -22,7 +22,10 @@ public class EnemyController : MonoBehaviour
     public float sightRange;
     public bool player1InSightRange, playerInSightRange;
 
-
+    private void Start() { 
+        player = GameObject.FindGameObjectWithTag("nave1");
+        player1 = GameObject.FindGameObjectWithTag("nave2");
+    }
     private void Update()
     {
         //Check for sight and attack range
@@ -68,12 +71,12 @@ public class EnemyController : MonoBehaviour
     {
         if (_whatplayer)
         {
-            agent.SetDestination(player.position);
-            transform.LookAt(player.position);
+            agent.SetDestination(player.transform.position);
+            transform.LookAt(player.transform.position);
         }
         else {
-            agent.SetDestination(player1.position);
-            transform.LookAt(player1.position);
+            agent.SetDestination(player1.transform.position);
+            transform.LookAt(player1.transform.position);
 
         }
     }
