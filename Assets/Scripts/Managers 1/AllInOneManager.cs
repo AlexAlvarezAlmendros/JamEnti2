@@ -36,6 +36,7 @@ public class AllInOneManager : MonoBehaviour
         
         if (lives <= 0) {
             SceneManager.LoadScene("SampleScene"); //gameover
+            SoundManager.instance.Stop("GameLoop");
         }
     }
 }

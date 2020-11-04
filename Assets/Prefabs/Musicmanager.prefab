@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3283591726811426237
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8119275959378621849}
+  - component: {fileID: 25591456558990008}
+  m_Layer: 0
+  m_Name: Musicmanager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8119275959378621849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3283591726811426237}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.055817086, y: 1.4940583, z: -8.984397}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &25591456558990008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3283591726811426237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33519f8e241d6d04fa86afa9b23eeee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MusicVolume: 0.2
+  SFXVolume: 0.2
+  PitchGlobal: 1
+  sounds:
+  - name: menuLoop
+    clip: {fileID: 8300000, guid: 91d1cebdabc224943a7b72d444ed0d78, type: 3}
+    audioType: 1
+    volume: 0
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: BulidUp
+    clip: {fileID: 8300000, guid: d2d5de2c9dc230240864d71dd0c2f6ae, type: 3}
+    audioType: 1
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: GameLoop
+    clip: {fileID: 8300000, guid: ba43f43fb293d4840ac45745b75102c1, type: 3}
+    audioType: 1
+    volume: 0
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}

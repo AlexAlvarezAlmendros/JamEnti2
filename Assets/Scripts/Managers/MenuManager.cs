@@ -14,6 +14,7 @@ public class MenuManager : MonoBehaviour
         Title.gameObject.SetActive(true);
         HowToPlay.gameObject.SetActive(false);
         Credits.gameObject.SetActive(false);
+        SoundManager.instance.Play("menuLoop");
     }
 
     // Update is called once per frame
@@ -28,6 +29,8 @@ public class MenuManager : MonoBehaviour
         HowToPlay.gameObject.SetActive(false);
         Credits.gameObject.SetActive(false);
         SceneManager.LoadScene("MainScene");
+        SoundManager.instance.Stop("menuLoop");
+        SoundManager.instance.Play("GameLoop");
     }
 
     public void PlayHowToPlay()

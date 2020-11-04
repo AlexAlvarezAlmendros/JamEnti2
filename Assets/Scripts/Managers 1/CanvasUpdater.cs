@@ -7,7 +7,7 @@ public class CanvasUpdater : MonoBehaviour
 {
     public Text scoretext;
     public Text scoretext2;
-
+    bool musicplaying = false;
     public Image live1;
     public Image live2;
     public Image live3;
@@ -49,6 +49,5 @@ public class CanvasUpdater : MonoBehaviour
                 mlive3.enabled = true;
                 break;
         }
-
     }
 }
