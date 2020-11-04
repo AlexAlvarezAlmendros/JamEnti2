@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
+
 public class EnemyController : MonoBehaviour
 {
     public NavMeshAgent agent;
@@ -96,4 +97,13 @@ public class EnemyController : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, sightRange);
     }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == "Bullet")
+        {
+            health -= 10f;
+        }
+    }
+
 }

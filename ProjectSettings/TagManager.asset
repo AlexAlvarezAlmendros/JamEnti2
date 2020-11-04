@@ -10,6 +10,9 @@ TagManager:
   - Escudo
   - Dorado
   - Sound
+  - nave1
+  - nave2
+  - Bullet
   layers:
   - Default
   - TransparentFX
