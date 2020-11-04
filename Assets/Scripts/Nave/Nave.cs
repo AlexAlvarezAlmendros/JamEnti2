@@ -83,7 +83,7 @@ public class Nave : MonoBehaviour
 
 
         transform.position = transform.position + (transform.forward * velZ * Time.deltaTime);
-        transform.eulerAngles = new Vector3(transform.eulerAngles.x + (Input.GetAxis("Vertical") * Time.deltaTime *100), transform.eulerAngles.y + (Input.GetAxis("Horizontal") * Time.deltaTime *100), transform.eulerAngles.z);
+        transform.eulerAngles = new Vector3(transform.eulerAngles.x + (Input.GetAxis("Vertical")* Time.deltaTime *100), transform.eulerAngles.y + (Input.GetAxis("Horizontal") * dirNave * Time.deltaTime *100), transform.eulerAngles.z);
     }
 
     private void OnCollisionEnter(Collision collision)
