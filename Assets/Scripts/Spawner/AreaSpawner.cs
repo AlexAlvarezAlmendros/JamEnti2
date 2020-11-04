@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class AreaSpawner : MonoBehaviour
 {
@@ -36,6 +37,8 @@ public class AreaSpawner : MonoBehaviour
     //escala la masa segun la escala
     public bool scaleMass = true;
 
+
+    public NavMeshSurface surface;
 
 
     void Start()
